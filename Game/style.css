@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    margin-top: 5vh;
+    text-align: center;
+    color: rgba(135, 16, 246, 0.821);
+}
+
+.box {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 70px;margin-top: 10vh;
+}
+
+
+
+.intro:nth-child(1),
+.intro:nth-child(2) {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.intro:nth-child(1) {
+    margin-left: 20px;
+}
+
+.user,
+.comp {
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    font-size: 4rem;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+label {
+    display: inline-block;
+    font-size: 2rem;
+
+}
+
+#rock-rock:checked~.box .user::before,
+#rock-paper:checked~.box .user::before,
+#rock-scissor:checked~.box .user::before {
+    content: "✊";
+}
+
+#rock-rock:checked~.box .comp::before {
+    content: "✊";
+}
+
+#rock-paper:checked~.box .comp::before {
+    content: "🖐️";
+}
+
+#rock-scissor:checked~.box .comp::before {
+    content: "✌️";
+}
+
+#paper-rock:checked~.box .user::before,
+#paper-paper:checked~.box .user::before,
+#paper-scissor:checked~.box .user::before {
+    content: "🖐️";
+}
+
+#paper-rock:checked~.box .comp::before {
+    content: "✊";
+}
+
+#paper-paper:checked~.box .comp::before {
+    content: "🖐️";
+}
+
+#paper-scissor:checked~.box .comp::before {
+    content: "✌️";
+}
+
+#scissor-rock:checked~.box .user::before,
+#scissor-paper:checked~.box .user::before,
+#scissor-scissor:checked~.box .user::before {
+    content: "✌️";
+}
+
+#scissor-rock:checked~.box .comp::before {
+    content: "✊";
+}
+
+#scissor-paper:checked~.box .comp::before {
+    content: "🖐️";
+}
+
+#scissor-scissor:checked~.box .comp::before {
+    content: "✌️";
+}
+
+
+button {
+    margin-top: 10px;
+    background-color: rgba(135, 16, 246, 0.821);
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+
+[type="radio"] {
+    display: none;
+}
+
+h3 {
+
+    margin-top: 10vh;
+}
+
+
+
+.result {
+    width: 30vw;
+    height: 10vh;
+    background-color: rgb(207, 203, 203);
+    margin: auto;
+    margin-top: 25px;
+}
+
+#rock-rock:checked~.result::before {
+    content: "It's a Tie 😑";
+
+}
+
+#rock-paper:checked~.result::before {
+    content: "You Lose 😞";
+    color: red;
+}
+
+#rock-scissor:checked~.result::before {
+    content: "You Win 😊";
+    color: green;
+}
+
+
+#paper-rock:checked~.result:before {
+    content: "You Win 😊";
+    color: green;
+}
+
+#paper-paper:checked~.result:before {
+    content: "It's a Tie 😑";
+}
+
+#paper-scissor:checked~.result:before {
+    content: "You Lose 😞";
+    color: red;
+}
+
+#scissor-rock:checked~.result:before {
+    content: "You Lose 😞";
+    color: red;
+}
+
+#scissor-paper:checked~.result:before {
+    content: "You Win 😊";
+    color: green;
+}
+
+#scissor-scissor:checked~.result:before {
+    content: "It's a Tie 😑";
+}
+
+
+
+
+.result {
+    display: none;
+}
+
+#rock-rock:checked~.result,
+#rock-paper:checked~.result,
+#rock-scissor:checked~.result {
+    display: block;
+    text-align: center;
+}
+
+#paper-rock:checked~.result,
+#paper-paper:checked~.result,
+#paper-scissor:checked~.result {
+    display: block;
+    text-align: center;
+}
+
+#scissor-rock:checked~.result,
+#scissor-paper:checked~.result,
+#scissor-scissor:checked~.result {
+    display: block;
+    text-align: center;
+}
+
+.box2 {
+    display: flex;
+    position: relative;
+
+}
+
+.first,
+.second,
+.third {
+    position: absolute;
+    animation: loop 5s infinite;
+}
+
+@keyframes loop {
+    from {
+        z-index: 1;
+    }
+
+    to {
+        z-index: 3;
+    }
+}
+
+.first {
+    /* background-color: aqua; */
+    animation-delay: 0s;
+}
+
+.second {
+    /* background-color: red; */
+    animation-delay: 1s;
+}
+
+.third {
+    /* background-color: black; */
+    animation-delay: 2s;
+}
+
+.box3 {
+    display: flex;
+    position: relative;
+    left: 40px;
+
+}
+
+.first1,
+.second1,
+.third1 {
+    position: absolute;
+    animation: loop 5s infinite;
+
+}
+
+@keyframes loop {
+    from {
+        z-index: 1;
+    }
+
+    to {
+        z-index: 3;
+    }
+}
+
+.first1 {
+    /* background-color: aqua; */
+    animation-delay: 0s;
+}
+
+.second1 {
+    /* background-color: red; */
+    animation-delay: 1s;
+}
+
+.third1 {
+    /* background-color: black; */
+    animation-delay: 2s;
+}
+
+.box4 {
+    display: flex;
+    position: relative;
+    left: 80px;
+    margin-right: 120px
+}
+
+.first2,
+.second2,
+.third2 {
+    position: absolute;
+    animation: loop 5s infinite;
+
+}
+
+@keyframes loop {
+    from {
+        z-index: 1;
+    }
+
+    to {
+        z-index: 3;
+    }
+}
+
+.first2 {
+    /* background-color: aqua; */
+    animation-delay: 0s;
+}
+
+.second2 {
+    /* background-color: red; */
+    animation-delay: 1s;
+}
+
+.third2 {
+    /* background-color: black; */
+    animation-delay: 2s;
+}
+
+.options {
+    width: 20vw;
+    height: 10vh;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+[type="reset"] {
+    margin-top: 5vh;
+}
+
+.one,.two,.three{
+    cursor: pointer;
+}
+
+/* .home{
+    border: 2px solid black;
+    height: 70vh;
+    margin: auto;
+    margin-top: 20vh;
+    width: 450px;
+    padding-top: 20px;
+}
+
+.box{
+    margin-top: 10vh;
+} */
